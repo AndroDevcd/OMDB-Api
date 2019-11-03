@@ -92,39 +92,6 @@ public class RetrofitManager {
         return omdbApiInterface;
     }
 
-    public static void clearCache() {
-        if (okClient != null && okClient.cache() != null ) {
-            try {
-                okClient.cache().evictAll();
-            } catch(NullPointerException e) {
-                e.printStackTrace();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-    }
-
-    public static void removeFromCache(String urlString) {
-        try {
-            // If the app is started with notification and a call to clear cache is performed before the first getClient then then cache call fails.
-            if (client == null) {
-                getClient();
-            }
-
-            Iterator<String> it = okClient.cache().urls();
-
-            while (it.hasNext()) {
-                String next = it.next();
-
-                if (next.contains(urlString)) {
-                    it.remove();
-                }
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
     public interface OmdbApiInterface {
         @GET(".")
         Call<SearchResponse> performSearch(@Query("s") String searchParams, @Query("apikey") String apiKey);
