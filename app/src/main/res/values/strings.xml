@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">OMDb Api</string>
+    <string name="no_network_message">No Network</string>
+    <string name="invalid_search_message">No results found with your  search criteria.</string>
+    <string name="pref_movie_filter">pref_movie_filter</string>
+    <string name="pref_tv_series_filter">pref_tv_series_filter</string>
+</resources>

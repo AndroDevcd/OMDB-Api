@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="4dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp">
+
+            <ImageView
+                android:layout_centerVertical="true"
+                android:id="@+id/imageView"
+                android:layout_width="150dp"
+                android:layout_height="150dp" />
+
+            <TextView
+                android:layout_toRightOf="@+id/imageView"
+                android:id="@+id/title"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="15dp"
+                android:layout_alignTop="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Timeless" />
+
+            <TextView
+                android:id="@+id/pilot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/year"
+                android:layout_marginLeft="15sp"
+                android:layout_marginTop="10dp"
+                android:textSize="14sp"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@+id/imageView"
+                android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry." />
+
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:id="@+id/year"
+                android:layout_below="@+id/title"
+                android:layout_toRightOf="@+id/imageView"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_width="100dp"
+                android:textSize="10sp"
+                android:textColor="@color/solidWhite"
+                android:layout_height="28sp"
+                android:background="@drawable/dialog_pos_btn_bg"
+                android:text="2019" />
+
+            <TextView
+                android:id="@+id/type"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@+id/year"
+                android:layout_below="@+id/title"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:layout_width="80dp"
+                android:textSize="10sp"
+                android:textColor="@color/solidWhite"
+                android:layout_height="28sp"
+                android:background="@drawable/dialog_pos_btn_bg"
+                android:text="TV Series" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>
